@@ -19,7 +19,7 @@ export async function POST(req: Request) {
     await resend.emails.send({
       from: "Bow Design UK Website <hello@bowdesignuk.com>",
       to: "hello@bowdesignuk.com",
-      replyTo: email,
+      reply_to: email,
       subject: `New enquiry from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     });
