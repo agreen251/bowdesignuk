@@ -14,7 +14,7 @@ export default function AboutPage() {
       <section className="relative h-[60vh] min-h-[400px] flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/workshop.jpg"
+            src="/images/workshop.JPG"
             alt="Chris working in his Newcastle workshop"
             fill
             priority
@@ -56,10 +56,10 @@ export default function AboutPage() {
       {/* Workshop images */}
       <section className="max-w-6xl mx-auto px-6 pb-20 grid md:grid-cols-2 gap-6">
         <div className="relative aspect-video rounded-lg overflow-hidden">
-          <Image src="/images/workshop-2.jpg" alt="The workshop" fill className="object-cover" />
+          <Image src="/images/workshop-2.JPG" alt="The workshop" fill className="object-cover" />
         </div>
         <div className="relative aspect-video rounded-lg overflow-hidden">
-          <Image src="/images/arc-detail-2.jpg" alt="Arc detail" fill className="object-cover" />
+          <Image src="/images/arc-detail-2.JPG" alt="Arc detail" fill className="object-cover" />
         </div>
       </section>
 

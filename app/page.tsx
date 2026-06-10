@@ -9,7 +9,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-dark">
           {/* Replace src with your hero image path once added to /public/images/ */}
           <Image
-            src="/images/arc-hero.jpg"
+            src="/images/arc-hero.JPG"
             alt="The Arc Portable light resting against a dark surface"
             fill
             priority
@@ -63,7 +63,7 @@ export default function HomePage() {
           </div>
           <div className="order-1 md:order-2 relative aspect-[3/4] rounded-lg overflow-hidden">
             <Image
-              src="/images/arc-detail-1.jpg"
+              src="/images/arc-detail-1.JPG"
               alt="The Arc Portable light close up, showing the timber grain and LED strip"
               fill
               className="object-cover"
@@ -77,7 +77,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div className="relative aspect-square rounded-lg overflow-hidden">
             <Image
-              src="/images/workshop.jpg"
+              src="/images/workshop.JPG"
               alt="Chris working in his workshop in Newcastle"
               fill
               className="object-cover"
@@ -115,7 +115,7 @@ export default function HomePage() {
             {[1, 2, 3, 4].map((i) => (
               <div key={i} className="relative aspect-square overflow-hidden rounded">
                 <Image
-                  src={`/images/social-${i}.jpg`}
+                  src={`/images/social-${i}.JPG`}
                   alt={`bowdesignuk Instagram post ${i}`}
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"

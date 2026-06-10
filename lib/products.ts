@@ -40,9 +40,9 @@ export const products: Product[] = [
     careNotes:
       "Wipe clean with a dry or slightly damp cloth. Avoid direct contact with water. Keep away from direct sunlight for extended periods to preserve the timber finish.",
     images: [
-      "/images/arc-detail-1.jpg",
-      "/images/arc-hero.jpg",
-      "/images/arc-detail-2.jpg",
+      "/images/arc-detail-1.JPG",
+      "/images/arc-hero.JPG",
+      "/images/arc-detail-2.JPG",
     ],
   },
 ];
