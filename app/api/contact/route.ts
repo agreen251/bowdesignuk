@@ -1,7 +1,4 @@
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
-
-const resend = new Resend(process.env.RESEND_API_KEY!);
 
 export async function POST(req: Request) {
   try {
@@ -14,6 +11,15 @@ export async function POST(req: Request) {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: "Invalid email." }, { status: 400 });
     }
+
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error("RESEND_API_KEY not set");
+      return NextResponse.json({ error: "Contact form not configured." }, { status: 503 });
+    }
+
+    const { Resend } = await import("resend");
+    const resend = new Resend(apiKey);
 
     await resend.emails.send({
       from: "Bow Design UK Website <hello@bowdesignuk.com>",
