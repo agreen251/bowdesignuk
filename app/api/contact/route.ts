@@ -11,7 +11,6 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Missing fields." }, { status: 400 });
     }
 
-    // Basic email validation
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: "Invalid email." }, { status: 400 });
     }
@@ -19,8 +18,7 @@ export async function POST(req: Request) {
     await resend.emails.send({
       from: "Bow Design UK Website <hello@bowdesignuk.com>",
       to: "hello@bowdesignuk.com",
-      reply_to: email,
-      subject: `New enquiry from ${name}`,
+      subject: `New enquiry from ${name} <${email}>`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     });
 
